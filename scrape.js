@@ -2,8 +2,12 @@ const Request = require('./utils/request');
 const Scraper = require('./utils/scrape');
 const FileWriter = require('./utils/files');
 
-(async () => {
-    const urls = process.argv.slice(2);
+const scrape = async (argv) => {
+    const urls = argv.slice(2);
+    if (urls.length < 1) {
+        // eslint-disable-next-line no-console
+        console.error('No URL provided');
+    }
     for (const rawUrl of urls) {
         try {
             const { processedUrl, searchQuery } = Request.processUrl({ rawUrl });
@@ -14,4 +18,8 @@ const FileWriter = require('./utils/files');
             console.error(e.message);
         }
     }
-})();
+};
+
+module.exports = {
+    scrape
+};
