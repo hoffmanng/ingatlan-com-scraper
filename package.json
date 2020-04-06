@@ -2,7 +2,7 @@
   "name": "ingatlan-com-scraper",
   "version": "1.0.0",
   "description": "",
-  "main": "scrape.js",
+  "main": "cron.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
