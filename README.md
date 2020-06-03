@@ -4,9 +4,7 @@ Save ingatlan.com search results in json format.
 This script is scraping search results of real estate website ingatlan-com. You can provide one or multiple search URLs as inputs, and the script will fetch all the search results of all the input URLs into json files. It will re-fetch all results every 24h into new json files.
 
 ## Requirements
-- Node.js v10 or newer (https://nodejs.org/)
-or
-- Docker (https://www.docker.com/)
+- Installed Node.js v10 or newer (https://nodejs.org/)
 
 ## How to install
 1. Clone the repository
@@ -16,16 +14,21 @@ or
 npm install
 ```
 
-## How to use
-1. Start the script
+3. Start the script:
 ```console
-node cron.js SEARCH_RESULT_URL1 [SEARCH_RESULT_URL2] [SEARCH_RESULT_URL3] 
+npm start SEARCH_RESULT_URL1 [SEARCH_RESULT_URL2] [SEARCH_RESULT_URL3]
+```
+
+## How to use
+1. Start the script (in cron mode)
+```console
+npm start SEARCH_RESULT_URL1 [SEARCH_RESULT_URL2] [SEARCH_RESULT_URL3] 
 ```
 A `SEARCH_RESULT_URL` looks like: https://ingatlan.com/lista/elado+lakas+ix-ker+25-m2-alatt
 
 An example start command with two `SEARCH_RESULT_URL`s:
 ```console
-node cron.js https://ingatlan.com/lista/elado+lakas+ix-ker+25-m2-alatt https://ingatlan.com/szukites/elado+lakas+debrecen+25-m2-alatt
+npm start https://ingatlan.com/lista/elado+lakas+ix-ker+25-m2-alatt https://ingatlan.com/szukites/elado+lakas+debrecen+25-m2-alatt
 ```
 
 ## How it works
@@ -53,18 +56,12 @@ This script is _not_ stopping. It will keep running and re-fetching the same sea
 ## (Optional) Docker image
 The script can be run in a docker container. 
 
-To build and run the docker image locally use the following commands:
-```console
-docker build -t hoffmanng/ingatlan-com-scraper:latest .
-```
-
-To get the image from Docker Hub and run the image use the following commands:
+1. Get the latest image from Docker Hub:
 ```console
 docker pull hoffmanng/ingatlan-com-scraper:latest
 ```
 
-### (Optional) Run the docker image
-To run the image use the following command:
+2. Run the container:
 ```console
 docker run -e SEARCH_URL=SEARCH_RESULT_URL1 -d -v $(pwd)/data:/usr/src/app/data hoffmanng/ingatlan-com-scraper:latest
 ```
