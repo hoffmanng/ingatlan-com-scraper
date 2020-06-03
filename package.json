@@ -8,7 +8,8 @@
     "cron": "node src/cron.js",
     "once": "node src/onetime.js",
     "lint": "npx eslint src/**",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest --config=jest.config.js",
+    "test:watch": "npm test -- --watch"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.13.2",
     "jest": "^26.0.1"
   }
 }
