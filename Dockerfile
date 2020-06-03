@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 
-COPY . .
+COPY src ./src
 RUN mkdir data
 
-CMD node cron.js $SEARCH_URL
+CMD npm start $SEARCH_URL

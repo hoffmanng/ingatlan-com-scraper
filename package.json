@@ -1,14 +1,21 @@
 {
   "name": "ingatlan-com-scraper",
   "version": "1.0.0",
-  "description": "",
+  "description": "Scrape ingatlan.com search results",
   "main": "cron.js",
   "scripts": {
+    "start": "npm run cron",
+    "cron": "node src/cron.js",
+    "once": "node src/onetime.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:hoffmanng/ingatlan-com-scraper.git"
+  },
   "dependencies": {
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
