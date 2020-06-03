@@ -7,6 +7,7 @@
     "start": "npm run cron",
     "cron": "node src/cron.js",
     "once": "node src/onetime.js",
+    "lint": "npx eslint src/**",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
