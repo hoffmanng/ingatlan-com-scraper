@@ -9,7 +9,8 @@
     "once": "node src/onetime.js",
     "lint": "npx eslint src/**",
     "test": "npx jest --config=jest.config.js",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch --coverage",
+    "test:integration": "npx jest src/tests/ --config=jest.config.js"
   },
   "keywords": [],
   "author": "",

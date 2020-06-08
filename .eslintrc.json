@@ -24,6 +24,7 @@
         "no-restricted-syntax": "off",
         "no-await-in-loop": "off",
         "no-plusplus": "off",
-        "max-len": ["error", { "code": 120 }]
+        "max-len": ["error", { "code": 120 }],
+        "no-extra-boolean-cast": "off"
     }
 }

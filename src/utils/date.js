@@ -1,8 +1,7 @@
-const getTimestamp = () => new Date(Date.now());
+const date = {
+    getTimestamp: () => new Date(Date.now()),
 
-const getISODate = () => getTimestamp().toISOString();
-
-module.exports = {
-    getTimestamp,
-    getISODate
+    getISODate: () => date.getTimestamp().toISOString()
 };
+
+module.exports = date;
