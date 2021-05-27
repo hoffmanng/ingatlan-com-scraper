@@ -2,7 +2,13 @@ const axios = require('axios');
 
 const request = {
     fetchData: async (url) => {
-        const result = await axios.get(url);
+        const config = {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+                + '(KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+            }
+        };
+        const result = await axios.get(url, config);
         return result.data;
     },
 
