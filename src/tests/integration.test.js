@@ -7,7 +7,7 @@ const dateHelper = require('../utils/date');
 const fileHelper = require('../utils/files');
 
 const integrationTestTimeout = 15000;
-const urlPrefix = 'https://ingatlan.com/szukites';
+const urlPrefix = 'https://ingatlan.com/lista';
 
 const runOnce = async (rawUrl) => {
     // eslint-disable-next-line no-unused-vars
@@ -59,7 +59,6 @@ test('When I scrape "elado+lakas+sopron+40-45-m2", then I should get more than 2
     expect(resultFileContent[0].hasOwnProperty('link')).toBe(true);
     expect(resultFileContent[0].hasOwnProperty('building_area')).toBe(true);
     expect(resultFileContent[0].hasOwnProperty('room_count')).toBe(true);
-    expect(resultFileContent[0].hasOwnProperty('balcony_size')).toBe(true);
     expect(resultFileContent[0].hasOwnProperty('plot_area')).toBe(false);
 }, integrationTestTimeout);
 
