@@ -3,6 +3,8 @@ Save ingatlan.com search results in json format.
 
 This script is scraping search results of real estate website ingatlan-com. You can provide one or multiple search URLs as inputs, and the script will fetch all the search results of all the input URLs into json files. It will re-fetch all results every 24h into new json files.
 
+[![tests](https://github.com/hoffmanng/ingatlan-com-scraper/actions/workflows/node.js.yml/badge.svg)](https://github.com/hoffmanng/ingatlan-com-scraper/actions/workflows/node.js.yml)
+
 ## Requirements
 - Installed Node.js v10 or newer (https://nodejs.org/)
 
