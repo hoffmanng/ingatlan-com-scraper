@@ -59,7 +59,6 @@ test('When I scrape "elado+lakas+sopron+40-45-m2", then I should get more than 2
     expect(resultFileContent[0].hasOwnProperty('link')).toBe(true);
     expect(resultFileContent[0].hasOwnProperty('building_area')).toBe(true);
     expect(resultFileContent[0].hasOwnProperty('room_count')).toBe(true);
-    expect(resultFileContent[0].hasOwnProperty('balcony_size')).toBe(true);
     expect(resultFileContent[0].hasOwnProperty('plot_area')).toBe(false);
 }, integrationTestTimeout);
 
