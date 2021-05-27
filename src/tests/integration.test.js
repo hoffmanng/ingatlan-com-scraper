@@ -7,7 +7,7 @@ const dateHelper = require('../utils/date');
 const fileHelper = require('../utils/files');
 
 const integrationTestTimeout = 15000;
-const urlPrefix = 'https://ingatlan.com/szukites';
+const urlPrefix = 'https://ingatlan.com/lista';
 
 const runOnce = async (rawUrl) => {
     // eslint-disable-next-line no-unused-vars

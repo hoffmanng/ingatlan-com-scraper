@@ -28,7 +28,7 @@ A `SEARCH_RESULT_URL` looks like: https://ingatlan.com/lista/elado+lakas+ix-ker+
 
 An example start command with two `SEARCH_RESULT_URL`s:
 ```console
-npm start https://ingatlan.com/lista/elado+lakas+ix-ker+25-m2-alatt https://ingatlan.com/szukites/elado+lakas+debrecen+25-m2-alatt
+npm start https://ingatlan.com/lista/elado+lakas+ix-ker+25-m2-alatt https://ingatlan.com/lista/elado+lakas+debrecen+25-m2-alatt
 ```
 
 ## How it works
